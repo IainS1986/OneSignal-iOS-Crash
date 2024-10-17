@@ -17,7 +17,7 @@ namespace Core.ViewModels
             // Fake delay
             await Task.Delay(1000);
             
-            pushNotificationService.SetupLastChance();
+            await pushNotificationService.SetupLastChance();
 
             // Start proper
             await NavigationService.Navigate<FirstViewModel>();

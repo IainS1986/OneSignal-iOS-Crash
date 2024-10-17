@@ -12,7 +12,8 @@
 
     <ItemGroup>
       <PackageReference Include="MvvmCross" Version="9.2.0" />
-      <PackageReference Include="OneSignalSDK.DotNet" Version="5.2.1" />
+      <PackageReference Include="OneSignalSDK.DotNet" Version="5.1.3" />
+      <PackageReference Update="Microsoft.Maui.Essentials" Version="8.0.92" />
     </ItemGroup>
 
 </Project>

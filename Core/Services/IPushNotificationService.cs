@@ -2,7 +2,11 @@ namespace Core.Services;
 
 public interface IPushNotificationService
 {
-    void SetupLastChance();
+    bool HasSetup { get; }
+    
+    event EventHandler OnSetupDone; 
+    
+    Task SetupLastChance();
 
     Task RequestPermission();
 }

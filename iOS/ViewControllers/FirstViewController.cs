@@ -14,6 +14,7 @@ namespace iOS.ViewControllers
             base.CreateView();
 
             _textLabel = new UILabel() { TranslatesAutoresizingMaskIntoConstraints = false };
+            _textLabel.Lines = 3;
             Add(_textLabel);
         }
 

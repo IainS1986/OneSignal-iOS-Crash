@@ -1,5 +1,6 @@
 // using OneSignalSDK.DotNet;
 
+using Microsoft.Maui.ApplicationModel;
 using OneSignalSDK.DotNet;
 using OneSignalSDK.DotNet.Core.Debug;
 
@@ -8,15 +9,21 @@ namespace Core.Services
 
     public class PushNotificationService : IPushNotificationService
     {
-        protected bool HasSetup { get; private set; }
-        protected bool Identified { get; private set; }
+        public bool HasSetup { get; private set; }
+        public bool Identified { get; private set; }
 
-        public void SetupLastChance()
+        public event EventHandler OnSetupDone; 
+
+        public async Task SetupLastChance()
         {
-            // Enable verbose OneSignal logging to debug issues if needed.
-            OneSignal.Debug.LogLevel = LogLevel.VERBOSE;
-            OneSignal.Initialize("fake-test-key");
+            await MainThread.InvokeOnMainThreadAsync(() =>
+            {
+                // Enable verbose OneSignal logging to debug issues if needed.
+                OneSignal.Debug.LogLevel = LogLevel.VERBOSE;
+                OneSignal.Initialize("fake-test-key");
+            });
             HasSetup = true;
+            OnSetupDone?.Invoke(this, EventArgs.Empty);
 
             // Attempt to identify
             // Identify();

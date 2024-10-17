@@ -38,22 +38,22 @@
             <string>bluetooth-central</string>
             <string>bluetooth-peripheral</string>
         </array>
-        <key>NSBluetoothPeripheralUsageDescription</key>
-        <string>Test</string>
-        <key>NSBluetoothAlwaysUsageDescription</key>
-        <string>Test</string>
         <key>UIViewControllerBasedStatusBarAppearance</key>
         <true/>
         <key>ITSAppUsesNonExemptEncryption</key>
         <false/>
         <key>UIFileSharingEnabled</key>
         <true/>
-        <key>NSPhotoLibraryUsageDescription</key>
-        <string>Test.</string>
-        <key>NSPhotoLibraryAddUsageDescription</key>
-        <string>Test.</string>
-        <key>NSLocationWhenInUseUsageDescription</key>
-        <string>Test</string>
+        <key>CFBundleURLTypes</key>
+        <array>
+        </array>
+        <key>CFBundleDocumentTypes</key>
+        <array>
+        </array>
+        <key>LSSupportsOpeningDocumentsInPlace</key>
+        <false/>
+        <key>UISupportsDocumentBrowser</key>
+        <false/>
         <key>UIRequiresFullScreen</key>
         <true/>
         <key>UISupportedInterfaceOrientations</key>
@@ -65,5 +65,23 @@
             <string>UIInterfaceOrientationLandscapeLeft</string>
             <string>UIInterfaceOrientationLandscapeRight</string>
         </array>
+
+
+
+        <!-- Permission options for the `bluetooth` -->
+        <key>NSBluetoothAlwaysUsageDescription</key>
+        <string>bluetooth</string>
+        <key>NSBluetoothPeripheralUsageDescription</key>
+        <string>bluetooth</string>
+
+        <!-- Permission options for the `photos` group -->
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>photo</string>
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>photo</string>
+        
+        <!-- Permission options for the `location` group -->
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>Location is required for more accurate results and measurements when communicating with Moasure ONE devices</string>
     </dict>
 </plist>
