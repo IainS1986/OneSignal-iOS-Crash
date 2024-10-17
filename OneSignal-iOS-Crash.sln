@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "iOS\iOS.csproj", "{6140174D-785E-4B75-9665-87E77DE5614E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F5C0572E-2BFF-4A0C-B7CD-C46AB430F107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6140174D-785E-4B75-9665-87E77DE5614E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6140174D-785E-4B75-9665-87E77DE5614E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6140174D-785E-4B75-9665-87E77DE5614E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6140174D-785E-4B75-9665-87E77DE5614E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C0572E-2BFF-4A0C-B7CD-C46AB430F107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C0572E-2BFF-4A0C-B7CD-C46AB430F107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C0572E-2BFF-4A0C-B7CD-C46AB430F107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C0572E-2BFF-4A0C-B7CD-C46AB430F107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

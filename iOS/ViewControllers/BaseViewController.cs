@@ -1,31 +1,38 @@
 using Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
 
-namespace OneSignal_iOS_Crash.iOS;
-
-public class BaseViewController<TViewModel> : MvxViewController<TViewModel>
-    where TViewModel : BaseViewModel
+namespace iOS.ViewControllers
 {
-    public override void ViewDidLoad()
+    public class BaseViewController<TViewModel> : MvxViewController<TViewModel>
+        where TViewModel : BaseViewModel
     {
-        base.ViewDidLoad();
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
-        // Disable Drag to dismiss (messes with MvvmCross, TODO - Come back to this later)
-        if (OperatingSystem.IsIOSVersionAtLeast(13))
-            ModalInPresentation = true;
+            // Disable Drag to dismiss (messes with MvvmCross, TODO - Come back to this later)
+            if (OperatingSystem.IsIOSVersionAtLeast(13))
+                ModalInPresentation = true;
 
-        View.BackgroundColor = UIColor.White;
+            View.BackgroundColor = UIColor.White;
 
-        CreateView();
+            CreateView();
 
-        LayoutView();
+            LayoutView();
 
-        BindView();
+            BindView();
+        }
+
+        protected virtual void CreateView()
+        {
+        }
+
+        protected virtual void BindView()
+        {
+        }
+
+        protected virtual void LayoutView()
+        {
+        }
     }
-    
-    protected virtual void CreateView() { }
-    
-    protected virtual void BindView() { }
-    
-    protected virtual void LayoutView() { }
 }

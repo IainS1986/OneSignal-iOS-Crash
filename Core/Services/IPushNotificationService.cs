@@ -1,6 +1,8 @@
 namespace Core.Services;
 
-public class IPushNotificationService
+public interface IPushNotificationService
 {
-    
+    void SetupLastChance();
+
+    Task RequestPermission();
 }
