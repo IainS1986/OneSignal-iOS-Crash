@@ -46,6 +46,6 @@
     <ItemGroup>
       <PackageReference Include="Cirrious.FluentLayout" Version="3.0.0" />
       <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.92" />
-      <PackageReference Include="OneSignalSDK.DotNet" Version="5.1.3" />
+      <PackageReference Include="OneSignalSDK.DotNet" Version="5.2.1" />
     </ItemGroup>
 </Project>
