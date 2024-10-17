@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-ios</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <ImplicitUsings>true</ImplicitUsings>
+        <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <CreatePackage>false</CreatePackage>
+        <ProvisioningType>manual</ProvisioningType>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchExtraArgs>--nolinkaway --dlsym:Microsoft.Win32.Registry.dll</MtouchExtraArgs>
+        <DebugType>full</DebugType>
+        <WarningLevel>4</WarningLevel>
+        <CodesignProvision>Automatic</CodesignProvision>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <PlatformTarget>anycpu</PlatformTarget>
+        <ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <CreatePackage>false</CreatePackage>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+        <MtouchExtraArgs>--dlsym:Microsoft.Win32.Registry.dll</MtouchExtraArgs>
+        <DebugType>none</DebugType>
+        <WarningLevel>4</WarningLevel>
+        <CodesignProvision>Automatic</CodesignProvision>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <PlatformTarget>ARM64</PlatformTarget>
+        <ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
+        <MtouchUseLlvm>true</MtouchUseLlvm>
+        <MtouchEnableBitcode>false</MtouchEnableBitcode>
+        <!-- AOT everything, except WW dlls, which will be interpreted -->
+        <MtouchInterpreter>-all,WW.Pdf,WW.Cad,WW</MtouchInterpreter>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Core\Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Cirrious.FluentLayout" Version="3.0.0" />
+      <PackageReference Include="OneSignalSDK.DotNet" Version="5.1.3" />
+    </ItemGroup>
+</Project>

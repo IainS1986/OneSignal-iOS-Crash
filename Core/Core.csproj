@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseMauiEssentials>true</UseMauiEssentials>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <SignAssembly>true</SignAssembly>
+        <NoWarn>1701;1702;CS8002</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MvvmCross" Version="9.2.0" />
+      <PackageReference Include="OneSignalSDK.DotNet" Version="5.2.1" />
+    </ItemGroup>
+
+</Project>
